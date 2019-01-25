@@ -1,0 +1,15 @@
+{
+  "name": "CanvasJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/divthesign/CanvasJS.git",
+  "author": "daniel <verdudaniel7@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parallelshell \"npm run server\" \"npm run watch\"",
+    "watch": "nodemon -e scss -x \"sass ./src/scss:./dist/css\"",
+    "server": "http-server",
+    "sass": "sass ./src/scss:./dist/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
