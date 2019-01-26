@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
        //05- condicional para que rebote
        //06- añadimos + radius
-       if(x + radius > innerWidth){
+       if(x + radius > innerWidth || x - radius < 0){
            dX = -dX
        }if (x + radius ) {
            
