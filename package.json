@@ -6,10 +6,10 @@
   "author": "daniel <verdudaniel7@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parallelshell \"npm run server\" \"npm run watch\"",
-    "watch": "nodemon -e scss -x \"sass ./src/scss:./dist/css\"",
+    "start": "parallelshell \"npm run server\" \"npm run vigilar\"",
+    "vigilar": "nodemon -e scss -x \"sass scss:css\"",
     "server": "http-server",
-    "sass": "sass ./src/scss:./dist/css",
+    "sass": "sass scss:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
