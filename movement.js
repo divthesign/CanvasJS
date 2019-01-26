@@ -9,6 +9,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
    let c = canvas.getContext('2d')
 
+   //08-creamos varios cículos con el objeto Circle
+   function Circle(x, y){
+       this.x = x
+       this.y = y
+       
+       this.draw = function(){
+        c.beginPath()
+        c.arc(x, y, radius, 0, Math.PI * 2, false)
+        c.strokeStyle = 'rgba(255, 0, 0, 0.4)'
+        c.stroke()
+        //08-una vez metido el círculo en la función, no vemos nada por
+        //el c.clearRect(0 ,0 , innerWidth, innerHeight) de la funcion animate
+       }
+   }
+
+   var circle = new Circle(200, 200)
+   /* circle.draw() */
+
    //02-variable x para mover el círculo
    var x = Math.random() * innerWidth 
    var dX = (Math.random() * - 0.5) * 16
@@ -28,11 +46,14 @@ document.addEventListener('DOMContentLoaded', function(){
        //03- limpiamos con clearRect
        c.clearRect(0 ,0 , innerWidth, innerHeight)
 
-       console.log(c)
+       //08- llamamos a la funcion circle.draw()
+       circle.draw()
+
        c.beginPath()
        c.arc(x, y, radius, 0, Math.PI * 2, false)
        c.strokeStyle = 'rgba(255, 0, 0, 0.4)'
        c.stroke()
+
 
        //05- condicional para que rebote
        //06- añadimos + radius
