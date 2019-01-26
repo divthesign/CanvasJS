@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function(){
    let c = canvas.getContext('2d')
 
    //02-variable x para mover el círculo
-   var x = 200 
-   var dX = 4
+   var x = Math.random() * innerWidth 
+   var dX = (Math.random() * - 0.5) * 16
 
    //07- var y para mover el círculo arriba y abajo y  var dY para la velocidad
-   var y = 200
-   var dY = 4
+   var y = Math.random() * innerHeight
+   var dY = (Math.random() * - 0.5) * 16
 
    //06- para que rebote desde la esquina del círculo
    var radius = 30
